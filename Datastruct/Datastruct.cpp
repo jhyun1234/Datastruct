@@ -27,6 +27,18 @@ void PushFront(Node * target, int data)
 
     
 }
+void Remove(Node* target)
+{
+    Node* deleteNode = target->next;
+    target->next = deleteNode->next;
+    delete deleteNode;
+
+
+
+}
+
+
+
 
 
 int main()
@@ -34,9 +46,10 @@ int main()
     Node* head = new Node;
     head->next = nullptr;
 
-    PushFront(head, 10);
-    PushFront(head, 20);
-
+   PushFront(head, 10);
+   PushFront(head, 20);
+   
+   Remove(head);
 
     Node* currentPtr = head->next;
 
