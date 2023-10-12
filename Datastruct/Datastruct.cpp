@@ -1,5 +1,6 @@
 ﻿
 #include <iostream>
+#include "SinglelinkedList.h"
 
 using namespace std;
 #pragma region 단일 연결 리스트
@@ -43,21 +44,14 @@ void Remove(Node* target)
 
 int main()
 {
-    Node* head = new Node;
-    head->next = nullptr;
+    SinglelinkedList<int> list;
 
-   PushFront(head, 10);
-   PushFront(head, 20);
-   
-   Remove(head);
+    list.PushFront(10);
+    list.PushFront(20);
+    list.PopFront();
+    cout << "list 의 사이즈 : " << list.Size() << endl;
 
-    Node* currentPtr = head->next;
-
-    while (currentPtr != nullptr)
-    {
-        cout << currentPtr->data << endl;
-        currentPtr = currentPtr->next;
-    }
+    list.DisPlay();
 
     
 }

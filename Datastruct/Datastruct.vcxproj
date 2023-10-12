@@ -128,9 +128,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Datastruct.cpp" />
+    <ClCompile Include="DoublelinkedList.cpp" />
     <ClCompile Include="SinglelinkedList.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DoublelinkedList.h" />
     <ClInclude Include="SinglelinkedList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
