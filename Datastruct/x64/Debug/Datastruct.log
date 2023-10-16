@@ -1,2 +1,13 @@
 ﻿  Datastruct.cpp
-  Datastruct.vcxproj -> C:\Users\User A\Desktop\App1\Datastruct\Datastruct\x64\Debug\Datastruct.exe
+  DoublelinkedList.cpp
+C:\Users\User A\Desktop\App1\Datastruct\Datastruct\DoublelinkedList.h(103,20): error C2760: 구문 오류: 여기서 '='은(는) 예상치 못한 오류였습니다. 예상된 오류는 '식'였습니다
+C:\Users\User A\Desktop\App1\Datastruct\Datastruct\DoublelinkedList.h(189,2): message : 컴파일되는 클래스 템플릿 인스턴스화 'DoublelinkedList<T>'에 대한 참조를 확인하세요.
+C:\Users\User A\Desktop\App1\Datastruct\Datastruct\DoublelinkedList.h(103,20): error C3878: 구문 오류: 예기치 않은 토큰 '='이(가) 'expression' 다음에 있습니다.
+C:\Users\User A\Desktop\App1\Datastruct\Datastruct\DoublelinkedList.h(103,20): message : 오류 복구를 건너뛰었습니다. '= 식별자'
+C:\Users\User A\Desktop\App1\Datastruct\Datastruct\DoublelinkedList.h(132,20): error C2760: 구문 오류: 여기서 '='은(는) 예상치 못한 오류였습니다. 예상된 오류는 '식'였습니다
+C:\Users\User A\Desktop\App1\Datastruct\Datastruct\DoublelinkedList.h(132,20): error C3878: 구문 오류: 예기치 않은 토큰 '='이(가) 'expression' 다음에 있습니다.
+C:\Users\User A\Desktop\App1\Datastruct\Datastruct\DoublelinkedList.h(132,20): message : 오류 복구를 건너뛰었습니다. '= 식별자'
+C:\Users\User A\Desktop\App1\Datastruct\Datastruct\DoublelinkedList.h(169,25): error C3861: 'currnetNode': 식별자를 찾을 수 없습니다.
+C:\Users\User A\Desktop\App1\Datastruct\Datastruct\DoublelinkedList.h(169,25): error C2065: 'currnetNode': 선언되지 않은 식별자입니다.
+  SinglelinkedList.cpp
+  코드를 생성하고 있습니다...

@@ -12,6 +12,7 @@ private:
     {
         T data;
         Node* next;
+        Node* prev;
     };
 
     int size;

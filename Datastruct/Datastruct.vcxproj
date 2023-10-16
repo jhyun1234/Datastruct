@@ -132,6 +132,7 @@
     <ClCompile Include="SinglelinkedList.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CireclelinkedList.h" />
     <ClInclude Include="DoublelinkedList.h" />
     <ClInclude Include="SinglelinkedList.h" />
   </ItemGroup>
