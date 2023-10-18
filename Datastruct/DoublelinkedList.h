@@ -1,13 +1,12 @@
 #pragma once
 #include <iostream>
+
 using namespace std;
 
 template <typename T>
-class DoublelinkedList
+class DoubleLinkedList
 {
 private:
-
-
     struct Node
     {
         T data;
@@ -19,9 +18,9 @@ private:
     Node* head;
     Node* tail;
 
-
 public:
-    DoublelinkedList()
+
+    DoubleLinkedList()
     {
         size = 0;
         head = nullptr;
@@ -42,7 +41,6 @@ public:
         {
             head = newNode;
             tail = newNode;
-
         }
         else
         {
@@ -52,6 +50,7 @@ public:
 
             head = newNode;
         }
+
         size++;
     }
 
@@ -67,10 +66,8 @@ public:
 
         if (head == nullptr)
         {
-
             head = newNode;
             tail = newNode;
-
         }
         else
         {
@@ -79,9 +76,8 @@ public:
             tail->next = newNode;
 
             tail = newNode;
-
-
         }
+
         size++;
     }
 
@@ -89,14 +85,13 @@ public:
     {
         if (head == nullptr)
         {
-            cout << "List is Emoty" << endl;
-
+            cout << "List is Empty" << endl;
             return;
-
         }
         else if (size == 1)
         {
             Node* deleteNode = head;
+
             head = nullptr;
             tail = nullptr;
 
@@ -112,6 +107,7 @@ public:
 
             delete deleteNode;
         }
+
         size--;
     }
 
@@ -121,11 +117,11 @@ public:
         {
             cout << "List is Empty" << endl;
             return;
-
         }
         else if (size == 1)
         {
             Node* deleteNode = head;
+
             head = nullptr;
             tail = nullptr;
 
@@ -141,12 +137,12 @@ public:
 
             delete deleteNode;
         }
+
         size--;
     }
 
     void Insert(int position, T data)
     {
-        
         if (position <= 1)
         {
             PushFront(data);
@@ -154,9 +150,9 @@ public:
         }
 
         Node* currentNode = head;
+
         for (int i = 1; i < position; i++)
         {
-
             currentNode = currentNode->next;
         }
 
@@ -166,14 +162,15 @@ public:
 
         currentNode->prev->next = newNode;
 
-        newNode->prev = currnetNode->prev;
+        newNode->prev = currentNode->prev;
 
         currentNode->prev = newNode;
 
         size++;
     }
 
-    ~DoublelinkedList()
+
+    ~DoubleLinkedList()
     {
         while (head != nullptr)
         {
@@ -181,10 +178,7 @@ public:
             head = head->next;
 
             delete deleteNode;
-
         }
-    
-
     }
-};
 
+};

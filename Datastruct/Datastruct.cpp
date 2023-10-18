@@ -1,57 +1,115 @@
-﻿
-#include <iostream>
-#include "SinglelinkedList.h"
+﻿#include <iostream>
+#include <vector>
 
 using namespace std;
-#pragma region 단일 연결 리스트
 
-    // 1. 단일 연결 리스트 노드 제작 
-   
-struct Node
+#define SIZE 5
+
+#pragma region 연산자 오버로딩
+class Vector2
 {
-    int data;
-    Node* next;
+private:
+    int x;
+    int y;
+public:
+    Vector2(int x, int y)
+    {
+        this->x = x;
+        this->y = y;
+
+    }
+
+    Vector2 operator+(const Vector2 & vector2)
+    {
+        Vector2 clone(this->x + vector2.x , this->y + vector2.y);
+        
+        return clone;
+    }
+    Vector2 operator-(const Vector2& vector2)
+    {
+        Vector2 clone(this->x - vector2.x, this->y - vector2.y);
+
+        return clone;
+    }
+    Vector2 operator*(const Vector2& vector2)
+    {
+        Vector2 clone(this->x * vector2.x, this->y * vector2.y);
+
+        return clone;
+    }
+    Vector2 operator/(const Vector2& vector2)
+    {
+        Vector2 clone(this->x / vector2.x, this->y / vector2.y);
+
+        return clone;
+    }
 
 
+    // ++
+    // --
+    // []
+
+
+    int GetX()
+    {
+        return x;
+    }
+    int GetY()
+    {
+        return y;
+    }
 };
 
 
 
 #pragma endregion
 
-void PushFront(Node * target, int data)
-{
-    Node* newNode = new Node;
-    newNode->data = data;
-    newNode->next = target->next;
-    target->next = newNode;
-
-    
-}
-void Remove(Node* target)
-{
-    Node* deleteNode = target->next;
-    target->next = deleteNode->next;
-    delete deleteNode;
-
-
-
-}
-
-
-
 
 
 int main()
 {
-    SinglelinkedList<int> list;
+#pragma region 거품 정렬
+    // 서로 인접한 두 원소를 검사하여 정렬하는 알고리즘이다.
 
-    list.PushFront(10);
-    list.PushFront(20);
-    list.PopFront();
-    cout << "list 의 사이즈 : " << list.Size() << endl;
+    // 시간 복잡도 O(n^2) 
 
-    list.DisPlay();
+
+    /*int bubbleBuffer[SIZE] = { 1,3,4,7,2 };
+
+    for (int i = 0; i < SIZE; i++)
+    {
+        for (int j = 0; j < (SIZE-i) - 1; j++)
+        {
+            if (bubbleBuffer[j] > bubbleBuffer[j + 1])
+            {
+                swap(bubbleBuffer[j], bubbleBuffer[j + 1]);
+            }
+        }
+
+    }
+
+    for (const int& element : bubbleBuffer)
+    {
+        cout << element << " ";
+    }*/
+
+
+#pragma endregion
+
+#pragma region 연산자 오버로딩
+
+
+
+
+    Vector2 UP(0, 1);
+    Vector2 Right(1, 0);
+
+
+    // clone 객체 (1,1)
+    Vector2 temp = UP + Right;
+
+#pragma endregion
+
 
     
 }
