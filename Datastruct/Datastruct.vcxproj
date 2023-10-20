@@ -135,6 +135,7 @@
     <ClInclude Include="BubleSort.h" />
     <ClInclude Include="CireclelinkedList.h" />
     <ClInclude Include="DoublelinkedList.h" />
+    <ClInclude Include="SelectSort.h" />
     <ClInclude Include="SinglelinkedList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

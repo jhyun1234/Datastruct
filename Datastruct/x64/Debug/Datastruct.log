@@ -1,3 +1,2 @@
 ﻿  Datastruct.cpp
-C:\Users\User A\Desktop\App1\Datastruct\Datastruct\Datastruct.cpp(20,9): warning C4101: 'temp' :참조되지 않은 지역 변수입니다.
   Datastruct.vcxproj -> C:\Users\User A\Desktop\App1\Datastruct\Datastruct\x64\Debug\Datastruct.exe
