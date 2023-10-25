@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CircleQueue.cpp" />
     <ClCompile Include="Datastruct.cpp" />
     <ClCompile Include="DoublelinkedList.cpp" />
     <ClCompile Include="Linear.cpp" />
@@ -135,7 +136,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BubleSort.h" />
+    <ClInclude Include="CircleQueue.h" />
     <ClInclude Include="CireclelinkedList.h" />
+    <ClInclude Include="CountSort.h" />
     <ClInclude Include="DoublelinkedList.h" />
     <ClInclude Include="InsertSort.h" />
     <ClInclude Include="Linear.h" />
