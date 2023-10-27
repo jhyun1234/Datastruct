@@ -133,6 +133,7 @@
     <ClCompile Include="Linear.cpp" />
     <ClCompile Include="SinglelinkedList.cpp" />
     <ClCompile Include="STACK.cpp" />
+    <ClCompile Include="Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BubleSort.h" />
@@ -145,6 +146,7 @@
     <ClInclude Include="SelectSort.h" />
     <ClInclude Include="SinglelinkedList.h" />
     <ClInclude Include="STACK.h" />
+    <ClInclude Include="Vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

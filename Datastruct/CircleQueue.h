@@ -6,6 +6,12 @@ using namespace std;
 #define SIZE 4
 
 template <typename T>
+#pragma region 원형 큐
+// 물리적으로는 선형 구조를 가지고 있으며,
+// 큐의 시작점과 끝점을 연결한 큐이다.
+
+
+#pragma endregion
 class CircleQueue
 {
 private:
