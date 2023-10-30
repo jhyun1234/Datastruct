@@ -72,20 +72,44 @@ public:
 		bufferPointer[size++] = data;
 	}
 
+	T& operator[](const int& count)
+	{
+		return bufferPointer[count];
+	}
 	void PopBack(T data)
 	{
-		if(size==0)
+		if(size<=0)
+		{
+			cout << "Vector is Empty" << endl;
+	    }
+		else
+		{
+			bufferPointer[--size] = NULL;
+		}
+	}
+
+	void Reserve(int newSize)
+	{
+		if (nweSize < capacity)
+		{
+			return;
+		}
+		Resize(newSize)
 		{
 
-			
-
-	    }
+		}
 	}
-	int Size()
+
+	int & Size() const
 	{
 		return size;
 	}
 
+
+	~Vector()
+	{
+		delete[] bufferPointer;
+	}
 	bool IsFull()
 	{
 
