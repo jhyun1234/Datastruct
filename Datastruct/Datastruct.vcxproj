@@ -136,6 +136,8 @@
     <ClCompile Include="Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BinarySearchTree.h" />
+    <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="BubleSort.h" />
     <ClInclude Include="CircleQueue.h" />
     <ClInclude Include="CireclelinkedList.h" />
