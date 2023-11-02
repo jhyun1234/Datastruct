@@ -143,6 +143,7 @@
     <ClInclude Include="CireclelinkedList.h" />
     <ClInclude Include="CountSort.h" />
     <ClInclude Include="DoublelinkedList.h" />
+    <ClInclude Include="MaxHeap.h" />
     <ClInclude Include="InsertSort.h" />
     <ClInclude Include="Linear.h" />
     <ClInclude Include="SelectSort.h" />

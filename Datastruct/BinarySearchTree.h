@@ -143,6 +143,70 @@ public:
         }
     }
 
-    
+    Node* MinValueNode(Node* root) // <- 
+    {
+        Node* currentNode = root;
+
+        while (currentNode && currentNode->left != nullptr)
+        {
+            currentNode = currentNode->left;
+        }
+
+        return currentNode;
+    }
+
+    Node* RemoveNode(Node* root, T data)
+    {
+        if (root == nullptr)
+        {
+            cout << "Not Key Found" << endl;
+            return root;
+        }
+
+        if (root->data > data)
+        {
+            root->left = RemoveNode(root->left, data);
+            
+
+        }
+        else if (root->data < data)
+        {
+           root->right = RemoveNode(root->right, data);
+        }
+        else // 삭제하고자 하는 Key를 찾았다.
+        {
+            // 자식 노드가 하나 있을 때 
+            // 자식 노드가 둘 다 없을 때
+            
+            Node* tempNode;
+            if (root->left == nullptr)
+            {
+                tempNode = root->right;
+                delete root;
+                return tempNode;
+            }
+            else if (root->right == nullptr)
+            {
+                tempNode = root->left;
+                delete root;
+                return tempNode;
+            }
+
+            // 자식 노드가 두 개 있을 떄
+            tempNode = MinValueNode(root->right);
+
+            // 삭제 Node의 데이터를 바꾼다.
+
+            root->data = tempNode->data;
+
+
+            // Node를 삭제한다.
+            
+            root->right = RemoveNode(root->right, tempNode->data);
+        }
+
+        return root;
+
+    }
 
 };
