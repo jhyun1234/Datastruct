@@ -1,44 +1,44 @@
 #pragma once
 #include <iostream>
+
 using namespace std;
 
 #define SIZE 8
 
-template <typename T>
+template<typename T>
 class MaxHeap
 {
 private:
 	T heapBuffer[SIZE];
 	int index;
-		
+
 public:
-	Maxheap()
+	MaxHeap()
 	{
 		for (int i = 0; i < SIZE; i++)
 		{
 			heapBuffer[i] = NULL;
 		}
-		index = 0;
 
+		index = 0;
 	}
 
 	void Insert(T data)
 	{
-		if (IsFull() == true)
+		if (IsFull())
 		{
-			cout << "MaxHeap IS Full" << endl;
+			cout << "MaxHeap is Full" << endl;
 			return;
 		}
 
 		heapBuffer[++index] = data;
 
 		int child = index;
-
 		int parent = index / 2;
 
 		while (child > 1)
 		{
-			// 자식 Node와 부모 Node의 데이터를 비교한다.
+			// 자식 노드와 부모 노드의 데이터를 비교합니다.
 			if (heapBuffer[parent] < heapBuffer[child])
 			{
 				swap(heapBuffer[parent], heapBuffer[child]);
@@ -46,30 +46,72 @@ public:
 
 			child = parent;
 			parent = child / 2;
-
 		}
-		
-
 	}
 
 	bool IsFull()
 	{
 		if (index == SIZE - 1)
-		{
 			return true;
-		}
 		else
-		{
 			return false;
-		}
 	}
 
-	void DisPlay()
+	void Display()
 	{
-		for (T element : heapBuffer)
+		for (const T& element : heapBuffer)
 		{
 			cout << element << " ";
 		}
 	}
 
+	T & Delete()
+	{
+		// Heap이 비어있다면 프로그램을 종료한다.
+		if (index <= 0)
+		{
+			cout << "Heap is Empty" << endl;
+			exit(1);
+		}
+
+		// 임시 변수 <- 가장 큰 값을 보관하는 역할
+		T result = heapBuffer[1];
+
+		// index 로 가리키는 배열의 값을 첫 번째 원소에 넣어준다.
+		heapBuffer[1] = heapBuffer[index];
+
+		// index로 가리키는 배열의 값을 초기화 한다.
+		heapBuffer[index] = NULL;
+
+		// index의 값을 감소시킨다.
+		index--;
+
+		int parent = 1;
+
+		while (parent * 2 <=index)
+		{
+			int child = parent * 2;
+
+			// 오른쪽 자식의 노드가 클 때
+			if (heapBuffer[child] < heapBuffer[child + 1])
+			{
+				child++;
+			}
+
+			// 부모 노드의 Key 값이 자식 노드의 Key 값보다 크다면 반복을 종료한다.
+
+			if (heapBuffer[child] < heapBuffer[parent])
+			{
+				break;
+			}
+
+			swap(heapBuffer[parent], heapBuffer[child]);
+			parent = child;
+
+			
+		}
+
+		return result;
+
+	}
 };
