@@ -18,24 +18,6 @@
     <ClCompile Include="Datastruct.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="SinglelinkedList.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="DoublelinkedList.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="STACK.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Linear.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="CircleQueue.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Vector.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SinglelinkedList.h">

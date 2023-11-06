@@ -127,13 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CircleQueue.cpp" />
     <ClCompile Include="Datastruct.cpp" />
-    <ClCompile Include="DoublelinkedList.cpp" />
-    <ClCompile Include="Linear.cpp" />
-    <ClCompile Include="SinglelinkedList.cpp" />
-    <ClCompile Include="STACK.cpp" />
-    <ClCompile Include="Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BinarySearchTree.h" />
